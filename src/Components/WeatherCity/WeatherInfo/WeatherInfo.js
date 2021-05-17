@@ -5,11 +5,12 @@ import WeatherExtra from './WeatherExtra/WeatherExtra';
 import {CLOUD,SUN,RAIN,SNOW,WINDY} from "./../../../Constants/Weathers";
 
 
-const WeatherInfo = function(){
+const WeatherInfo = function({data}){
+    const{temp, weatherState, humidity, wind}=data;
     return(
         <div>
-           <WeatherTemp weatherState={SNOW} temp="31"/>
-           <WeatherExtra humidity="40" wind="15"/>
+           <WeatherTemp temp={temp} weatherState={weatherState}/>
+           <WeatherExtra humidity={humidity} wind={wind}/>
         </div>
     );
 
