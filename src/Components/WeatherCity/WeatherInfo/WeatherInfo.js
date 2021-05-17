@@ -3,6 +3,7 @@ import "./WeatherInfo.css";
 import WeatherTemp from './WeatherTemp/WeatherTemp';
 import WeatherExtra from './WeatherExtra/WeatherExtra';
 
+
 const WeatherInfo = function(){
     return(
         <div>
