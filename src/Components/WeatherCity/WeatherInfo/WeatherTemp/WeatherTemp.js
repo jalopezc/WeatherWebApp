@@ -3,6 +3,7 @@ import WeatherInfo from '../WeatherInfo';
 import "./WeatherTemp.css";
 import WeatherIcons from "react-weathericons";
 import {CLOUD,SUN,RAIN,SNOW,WINDY} from "./../../../../Constants/Weathers";
+import PropTypes from 'prop-types';
 
 const icons = {
     [CLOUD]:"cloud",
@@ -26,6 +27,10 @@ const WeatherTemp = function({temp,weatherState}){
             <h2>{`${temp} °C`}</h2>
         </div>
     );
+};
 
+WeatherTemp.prototype ={
+    temp: PropTypes.number.isRequired,
+    weatherState: PropTypes.string.isRequired
 };
 export default WeatherTemp;
